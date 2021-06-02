@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    width: 100vw;
+    background-color:aqua;
+    height: 50px;
+    height: 80vh;
+    background-image: url('img/fundo4.jpg');
+    background-size:cover;
+    background-position: center;
+}
+.section1 {
+    height: 100%;
+    width: 50vw;
+    background-color:rgba(00, 00,00, 0.6);
+}
+.section1 > h1 {
+    color: white;
+    opacity: 0.5;
+    text-align: end;
+    position: relative;
+    top: 35%;
+    font-family: 'Chivo', sans-serif;
+    font-size: 80px;
+    padding-right: 15px;
+}
+.section2 {
+    height: 100%;
+    width: 50vw;
+
+}
+.section2 > h1 {
+    color: white;
+    text-align:start;
+    position: relative;
+    top: 35%;
+    font-family: 'Chivo', sans-serif;
+    font-size: 80px;
+    padding-left: 15px;
+}
+.menu {
+    align-self: flex-start;
+    text-align: center;
+}
+.menu > ul {
+    color: white;
+    list-style: none;
+    display:inline-table;
+    font-family: 'Montserrat', sans-serif;
+}
+.list-menu > li {
+    color: white;
+    list-style: none;
+    display:inline-table;
+    font-family: 'Montserrat', sans-serif;
+}
+.list-menu > li {
+    margin: 7px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 549px) {
+   .section1 > h1 {
+       top: 20%;
+       font-size: 70px;
+       padding: 15px;
+   }
+   .section2 > h1 {
+       top:25%;
+       font-size: 20px;
+       padding: 15px;
+       
+   }
+}
+.menuMobile {
+    background-color: azure;
+    color: black;
+    display:list-item;
+}
+.menuMobile > li {
+    padding: 10px;
+    text-align: center;
+}

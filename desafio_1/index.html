@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root"></div>
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://kit.fontawesome.com/342b18ed52.js" crossorigin="anonymous"></script>
+<script type="text/babel">
+const root = document.querySelector('#root');
+
+class App extends React.Component {
+    render() {
+        return(
+            <div>
+                <Container/>
+                <Menumobile/>
+            </div>
+        )
+    }
+}
+
+class Container extends React.Component {
+    render() {
+        return(
+            <div className="container">
+                <Section section="section1" title="MONTA" links={['Follow US',<i className="fab fa-facebook-f"></i>,<i className="fab fa-twitter"></i>, <i class="fab fa-instagram"></i>]} />
+                <Section section="section2" title="TRAVEL" links={['Destination', 'Deals', 'Special', 'Offers', 'About']}/>
+            </div>
+        )
+    }
+}
+class Section extends React.Component {
+    render() {
+        return(
+            <div className={this.props.section} >
+                <Menu links={this.props.links}/>
+                <h1>{this.props.title}</h1>
+            </div>
+        )
+    }
+
+}
+class Menu extends React.Component {
+    render() {
+        return(
+            <div className="menu">
+                    <ul className="list-menu">
+                        {this.props.links.map(link=> {
+                            return (
+                                <li key={link}>
+                                    {link}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+        )
+    }
+}
+class Menumobile extends React.Component {
+    render() {
+        return (
+            <div>
+                <ul className="menuMobile">
+                    <li>Destination</li>
+                    <li>Deals</li>
+                    <li>Special</li>
+                    <li>Offers</li>
+                    <li>About</li>
+                </ul>
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(<App/>, root);
+    
+</script>
+</body> 
+</html>
