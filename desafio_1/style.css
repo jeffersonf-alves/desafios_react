@@ -75,13 +75,24 @@
        padding: 15px;
        
    }
+   .manu {
+       display:none;
+   }
+
 }
 .menuMobile {
     background-color: azure;
     color: black;
     display:list-item;
-}
-.menuMobile > li {
-    padding: 10px;
-    text-align: center;
-}
+    }
+    .menuMobile > li {
+        padding: 10px;
+        text-align: center;
+        font-family: 'Chivo', sans-serif;
+    }
+    .barraMenu {
+    text-align: end;
+    }
+    .barraMenu > .fas {
+    padding-right: 30px;
+    }

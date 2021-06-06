@@ -34,6 +34,7 @@ class Container extends React.Component {
             <div className="container">
                 <Section section="section1" title="MONTA" links={['Follow US',<i className="fab fa-facebook-f"></i>,<i className="fab fa-twitter"></i>, <i class="fab fa-instagram"></i>]} />
                 <Section section="section2" title="TRAVEL" links={['Destination', 'Deals', 'Special', 'Offers', 'About']}/>
+               
             </div>
         )
     }
@@ -67,9 +68,15 @@ class Menu extends React.Component {
     }
 }
 class Menumobile extends React.Component {
+
+
+
     render() {
         return (
             <div>
+                <h1 className="barraMenu">
+                    <i className="fas fa-bars"></i>
+                </h1>
                 <ul className="menuMobile">
                     <li>Destination</li>
                     <li>Deals</li>
